@@ -5,3 +5,5 @@ const sequelize = new Sequelize("learn_sequelize", "root", "", {
     dialect: "mysql"
 })
 export { sequelize };
+
+

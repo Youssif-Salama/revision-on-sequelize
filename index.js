@@ -1,5 +1,6 @@
 import express from "express";
 // import mysql from "mysql2";
+import { createTables } from "./connections/createTables.js";
 import { sequelize } from "./connections/Db.connection.js";
 import userRouter from "./src/users/routers/users.routes.js";
 const server = express();
@@ -8,6 +9,7 @@ server.use("/users", userRouter);
 sequelize.authenticate()
     .then(() => {
         console.log("db connection done !");
+        cre
         server.listen(10000, () => {
             console.log("Server is listening on port 10000!");
         });
